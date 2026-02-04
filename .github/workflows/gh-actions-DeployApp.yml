@@ -26,7 +26,7 @@ jobs:
  #
  #  - run: az acr login --name acrdevsecops${{ secrets.LABINSTANCEID }}
 
- #  - run: docker build . -t acrdevsecops${{ secrets.LABINSTANCEID }}.azurecr.io/devsecops:${{ github.run_id }}
+ #  - run: docker build . -t acrdevsecops${{ secrets.LABINSTANCEID }}.azurecr.io/devsecops:21665746170
     
  #  - run: docker push acrdevsecops${{ secrets.LABINSTANCEID }}.azurecr.io/devsecops:${{ github.run_id }}
 
@@ -48,7 +48,7 @@ jobs:
     - uses: azure/appservice-settings@v1
       with:
         app-name: 'juiceshop-dev-devsecops-${{ secrets.LABINSTANCEID }} '
-        general-settings-json: '{"linuxFxVersion": "DOCKER|acrdevsecops${{ secrets.LABINSTANCEID }}.azurecr.io/devsecops:${{ github.run_id }}"}' 
+        general-settings-json: '{"linuxFxVersion": "DOCKER|acrdevsecops${{ secrets.LABINSTANCEID }}.azurecr.io/devsecops:$21665746170"}' 
 
     - uses: Azure/cli@v1.0.0
       with:
